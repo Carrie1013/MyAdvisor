@@ -1,0 +1,176 @@
+{
+  "portfolio_id": "CLIENT_A_2026",
+  "client_name": "Carrie Feng",
+  "client_profile": {
+    "risk_appetite": "moderate",
+    "investment_goals": "long-term growth with capital preservation",
+    "preferred_language": "English"
+  },
+  "valuation_date": "2026-02-28",
+  "total_value_usd": 1500000,
+  "asset_allocation": {
+    "equity": 0.72,
+    "fixed_income": 0.15,
+    "cash": 0.05,
+    "alternatives": 0.08
+  },
+  "holdings": [
+    {
+      "ticker": "AAPL",
+      "name": "Apple Inc.",
+      "asset_class": "equity",
+      "sector": "Technology",
+      "geography": "US",
+      "weight": 0.14,
+      "value_usd": 210000
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft Corporation",
+      "asset_class": "equity",
+      "sector": "Technology",
+      "geography": "US",
+      "weight": 0.09,
+      "value_usd": 135000
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet Inc.",
+      "asset_class": "equity",
+      "sector": "Technology",
+      "geography": "US",
+      "weight": 0.07,
+      "value_usd": 105000
+    },
+    {
+      "ticker": "JPM",
+      "name": "JPMorgan Chase & Co.",
+      "asset_class": "equity",
+      "sector": "Financials",
+      "geography": "US",
+      "weight": 0.06,
+      "value_usd": 90000
+    },
+    {
+      "ticker": "JNJ",
+      "name": "Johnson & Johnson",
+      "asset_class": "equity",
+      "sector": "Healthcare",
+      "geography": "US",
+      "weight": 0.05,
+      "value_usd": 75000
+    },
+    {
+      "ticker": "NESN",
+      "name": "Nestle S.A.",
+      "asset_class": "equity",
+      "sector": "Consumer Staples",
+      "geography": "International",
+      "weight": 0.05,
+      "value_usd": 75000
+    },
+    {
+      "ticker": "ASML",
+      "name": "ASML Holding N.V.",
+      "asset_class": "equity",
+      "sector": "Technology",
+      "geography": "International",
+      "weight": 0.05,
+      "value_usd": 75000
+    },
+    {
+      "ticker": "BRK.B",
+      "name": "Berkshire Hathaway Inc.",
+      "asset_class": "equity",
+      "sector": "Financials",
+      "geography": "US",
+      "weight": 0.04,
+      "value_usd": 60000
+    },
+    {
+      "ticker": "XOM",
+      "name": "Exxon Mobil Corporation",
+      "asset_class": "equity",
+      "sector": "Energy",
+      "geography": "US",
+      "weight": 0.04,
+      "value_usd": 60000
+    },
+    {
+      "ticker": "PG",
+      "name": "Procter & Gamble Co.",
+      "asset_class": "equity",
+      "sector": "Consumer Staples",
+      "geography": "US",
+      "weight": 0.04,
+      "value_usd": 60000
+    },
+    {
+      "ticker": "VWO",
+      "name": "Vanguard FTSE Emerging Markets ETF",
+      "asset_class": "equity",
+      "sector": "Diversified",
+      "geography": "Emerging Markets",
+      "weight": 0.04,
+      "value_usd": 60000
+    },
+    {
+      "ticker": "BOND_US_10Y",
+      "name": "US Treasury 10-Year Bond",
+      "asset_class": "fixed_income",
+      "sector": "Government",
+      "geography": "US",
+      "weight": 0.10,
+      "value_usd": 150000,
+      "credit_rating": "AAA"
+    },
+    {
+      "ticker": "HYG",
+      "name": "iShares iBoxx High Yield Corporate Bond ETF",
+      "asset_class": "fixed_income",
+      "sector": "Corporate",
+      "geography": "US",
+      "weight": 0.05,
+      "value_usd": 75000,
+      "credit_rating": "BB"
+    },
+    {
+      "ticker": "CASH",
+      "name": "Cash & Money Market",
+      "asset_class": "cash",
+      "sector": "Cash",
+      "geography": "US",
+      "weight": 0.05,
+      "value_usd": 75000
+    },
+    {
+      "ticker": "GLD",
+      "name": "SPDR Gold Shares",
+      "asset_class": "alternatives",
+      "sector": "Commodities",
+      "geography": "Global",
+      "weight": 0.08,
+      "value_usd": 120000
+    }
+  ],
+  "sector_breakdown": {
+    "Technology": 0.35,
+    "Financials": 0.10,
+    "Healthcare": 0.05,
+    "Consumer Staples": 0.09,
+    "Energy": 0.04,
+    "Diversified": 0.04,
+    "Government Bonds": 0.10,
+    "Corporate Bonds": 0.05,
+    "Cash": 0.05,
+    "Commodities": 0.08
+  },
+  "geographic_breakdown": {
+    "US_domestic": 0.62,
+    "international_developed": 0.10,
+    "emerging_markets": 0.04,
+    "global": 0.08,
+    "cash": 0.05,
+    "fixed_income": 0.15
+  }
+}

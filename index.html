@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Efficient Asset Management Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-icon">N</div>
+      <div class="logo-text">
+        <div class="logo-title">Asset Management</div>
+        <div class="logo-sub">Intelligence Platform</div>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Assistant</div>
+      <a href="#" class="nav-item active" data-view="chat">
+        <span class="nav-icon">&#9998;</span>
+        <span>AI Assistant</span>
+      </a>
+
+      <div class="nav-section-label">Portfolio</div>
+      <a href="#" class="nav-item" data-view="profile">
+        <span class="nav-icon">&#9737;</span>
+        <span>User Profile</span>
+      </a>
+      <a href="#" class="nav-item" data-view="optimizer">
+        <span class="nav-icon">&#10549;</span>
+        <span>ETF Optimizer</span>
+      </a>
+      <a href="#" class="nav-item" data-view="rebalancer">
+        <span class="nav-icon">&#9854;</span>
+        <span>Rebalancer</span>
+      </a>
+
+      <div class="nav-section-label">Strategy</div>
+      <a href="#" class="nav-item" data-view="recommendations">
+        <span class="nav-icon">&#11088;</span>
+        <span>Recommendations</span>
+      </a>
+      <a href="#" class="nav-item" data-view="report">
+        <span class="nav-icon">&#128196;</span>
+        <span>Annual Report</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button class="settings-btn" id="settingsBtn">&#9881; Settings</button>
+      <div class="sidebar-user">
+        <div class="user-avatar">CF</div>
+        <div class="user-info">
+          <div class="user-name">Carrie Feng</div>
+          <div class="user-role">Moderate Growth</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content" id="mainContent">
+    <div class="loading-screen" id="loadingScreen">
+      <div class="loading-spinner"></div>
+      <div class="loading-text">Initializing Platform...</div>
+      <div class="loading-sub" id="loadingStatus">Loading ETF data from Yahoo Finance...</div>
+    </div>
+  </main>
+
+  <!-- Settings Modal -->
+  <div class="modal-overlay" id="settingsModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>Platform Settings</h2>
+        <button class="modal-close" id="closeSettings">&#10005;</button>
+      </div>
+      <div class="modal-body">
+        <div class="setting-group">
+          <label class="setting-label">Claude API Key <span class="badge-required">Required for AI Chat</span></label>
+          <input type="password" id="claudeApiKey" placeholder="sk-ant-api03-..." class="setting-input">
+          <div class="setting-hint">Your key is stored in localStorage only. Never sent to any third party.</div>
+        </div>
+        <div class="setting-group">
+          <label class="setting-label">Backend API URL <span class="badge-optional">Optional</span></label>
+          <input type="text" id="backendUrl" placeholder="http://localhost:8000" class="setting-input">
+          <div class="setting-hint">URL of your FastAPI backend for server-side portfolio analysis. Leave empty for client-side mode.</div>
+        </div>
+        <div class="setting-group">
+          <label class="setting-label">Risk-Free Rate (%)</label>
+          <input type="number" id="riskFreeRate" placeholder="5.25" step="0.1" min="0" max="15" class="setting-input" style="width:120px">
+          <div class="setting-hint">Current 10-year Treasury yield used for Sharpe ratio and CML calculations.</div>
+        </div>
+        <div class="setting-group">
+          <label class="setting-label">Rebalancing Threshold (%)</label>
+          <input type="number" id="rebalThreshold" placeholder="5" step="0.5" min="1" max="20" class="setting-input" style="width:120px">
+          <div class="setting-hint">Absolute drift % that triggers a rebalancing alert.</div>
+        </div>
+        <div style="display:flex;gap:12px;margin-top:8px;">
+          <button class="btn-primary" id="saveSettings">Save Settings</button>
+          <button class="btn-ghost" id="closeSettings2">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast notifications -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Scripts — load order matters -->
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/math.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/views/chat.js"></script>
+  <script src="js/views/profile.js"></script>
+  <script src="js/views/optimizer.js"></script>
+  <script src="js/views/rebalancer.js"></script>
+  <script src="js/views/recommendations.js"></script>
+  <script src="js/views/report.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

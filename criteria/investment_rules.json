@@ -1,0 +1,107 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-02-28",
+  "description": "Company predefined investment criteria for portfolio compliance evaluation",
+  "rules": [
+    {
+      "rule_id": "R001",
+      "rule_name": "Single Position Concentration",
+      "description": "No single holding may exceed 10% of total portfolio value",
+      "metric": "max_single_weight",
+      "threshold": 0.10,
+      "operator": "<=",
+      "severity": "FAIL",
+      "category": "concentration"
+    },
+    {
+      "rule_id": "R002",
+      "rule_name": "Top 5 Holdings Concentration",
+      "description": "Top 5 holdings combined must not exceed 40% of total portfolio",
+      "metric": "top5_combined_weight",
+      "threshold": 0.40,
+      "operator": "<=",
+      "severity": "WARNING",
+      "category": "concentration"
+    },
+    {
+      "rule_id": "R003",
+      "rule_name": "Equity Allocation Maximum",
+      "description": "Equity exposure must not exceed 80% of total portfolio",
+      "metric": "equity_weight",
+      "threshold": 0.80,
+      "operator": "<=",
+      "severity": "FAIL",
+      "category": "asset_allocation"
+    },
+    {
+      "rule_id": "R004",
+      "rule_name": "Minimum Fixed Income Allocation",
+      "description": "Portfolio must maintain at least 10% in fixed income instruments",
+      "metric": "fixed_income_weight",
+      "threshold": 0.10,
+      "operator": ">=",
+      "severity": "FAIL",
+      "category": "asset_allocation"
+    },
+    {
+      "rule_id": "R005",
+      "rule_name": "Single Sector Concentration",
+      "description": "No single sector may exceed 30% of total portfolio",
+      "metric": "max_sector_weight",
+      "threshold": 0.30,
+      "operator": "<=",
+      "severity": "WARNING",
+      "category": "sector_diversification"
+    },
+    {
+      "rule_id": "R006",
+      "rule_name": "Geographic Diversification",
+      "description": "Domestic holdings must not exceed 70% of equity portfolio",
+      "metric": "domestic_equity_weight",
+      "threshold": 0.70,
+      "operator": "<=",
+      "severity": "WARNING",
+      "category": "geographic_diversification"
+    },
+    {
+      "rule_id": "R007",
+      "rule_name": "Minimum Cash Buffer",
+      "description": "Portfolio must maintain at least 2% cash or cash equivalents",
+      "metric": "cash_weight",
+      "threshold": 0.02,
+      "operator": ">=",
+      "severity": "FAIL",
+      "category": "liquidity"
+    },
+    {
+      "rule_id": "R008",
+      "rule_name": "Alternative Investment Cap",
+      "description": "Alternative investments (REITs, commodities, crypto) must not exceed 15% of portfolio",
+      "metric": "alternatives_weight",
+      "threshold": 0.15,
+      "operator": "<=",
+      "severity": "WARNING",
+      "category": "asset_allocation"
+    },
+    {
+      "rule_id": "R009",
+      "rule_name": "Low-rated Bond Restriction",
+      "description": "High-yield (below investment grade) bonds must not exceed 10% of fixed income allocation",
+      "metric": "high_yield_bond_weight_of_fixed_income",
+      "threshold": 0.10,
+      "operator": "<=",
+      "severity": "FAIL",
+      "category": "credit_quality"
+    },
+    {
+      "rule_id": "R010",
+      "rule_name": "Portfolio Minimum Holdings Count",
+      "description": "Equity portfolio must contain at least 10 distinct holdings for diversification",
+      "metric": "distinct_equity_holdings_count",
+      "threshold": 10,
+      "operator": ">=",
+      "severity": "WARNING",
+      "category": "diversification"
+    }
+  ]
+}
